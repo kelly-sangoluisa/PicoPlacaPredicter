@@ -35,28 +35,36 @@ This is a Java console application that predicts whether a vehicle **can be on t
 
 - Java 8 or higher
 - Maven (recommended for building and running tests)
-- Any IDE (e.g., IntelliJ IDEA, VS Code) or terminal with `javac` and `java`
+- Any IDE (e.g., IntelliJ IDEA, VS Code)
 
 ### Steps
 
 1. **Clone this repository:**
+
     ```bash
-    git clone https://github.com/your-username/pico-y-placa-predictor.git
-    cd pico-y-placa-predictor
+    git clone https://github.com/kelly-sangoluisa/PicoPlacaPredicter.git
+    cd PicoPlacaPredicter/picoplatapredictor
     ```
 
 2. **Build the project (with Maven):**
+
     ```bash
     mvn clean install
     ```
 
 3. **Run the application:**
+
+    Using Maven:
+
     ```bash
-    mvn exec:java -Dexec.mainClass="com.app.App"
+    mvn exec:java "-Dexec.mainClass=com.app.App"
     ```
+
     Or compile and run manually:
+
     ```bash
-    javac -d target/classes src/main/java/com/app/App.java
+    javac -d target/classes src/main/java/com/app/*.java src/main/java/com/app/business/*.java src/main/java/com/app/input/*.java src/main/java/com/app/output/*.java
+    
     java -cp target/classes com.app.App
     ```
 
