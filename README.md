@@ -127,7 +127,7 @@ You are allowed to drive at this time.
 Enter the date (dd-MM-yyyy): 19-05-2025
 Enter the time (HH:mm): 19:00
 Enter the license plate (e.g., ABC-1234): XYZ-1001
-You are allowed to drive at this time.
+You are NOT allowed to drive due to 'Pico y Placa' regulations.
 ```
 
 ## 📁 Folder Structure
