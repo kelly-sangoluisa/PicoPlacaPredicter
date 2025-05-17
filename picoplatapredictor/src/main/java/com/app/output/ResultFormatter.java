@@ -4,7 +4,7 @@ public class ResultFormatter {
     
     public static String formatResult(boolean canDrive) {
         return canDrive 
-            ? "Puede circular normalmente." 
-            : "No puede circular debido a restricciones de pico y placa.";
+            ? "You are allowed to drive at this time." 
+            : "You are NOT allowed to drive due to 'Pico y Placa' regulations.";
     }
 }
