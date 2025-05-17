@@ -37,8 +37,8 @@ public class Predictor {
         setTime(new TimeInput(rawTime));
         setPlate(new LicensePlate(fullPlate));
 
-        LocalDate parsedDate = date.parseDate(rawDate);
-        LocalTime parsedTime = time.parseTime(rawTime);
+        LocalDate parsedDate = date.parseDate();
+        LocalTime parsedTime = time.parseTime();
         DayOfWeek dayOfTheWeek = parsedDate.getDayOfWeek();
         int lastDigit = plate.getLastDigit(fullPlate);
         return ruleSet.hasRestriction(dayOfTheWeek, lastDigit, parsedTime);
