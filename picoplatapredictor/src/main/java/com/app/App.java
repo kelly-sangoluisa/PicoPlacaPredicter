@@ -12,6 +12,22 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * The {@code App} class serves as the entry point for the Pico y Placa Predictor application.
+ * It interacts with the user to collect input data, validates the license plate format,
+ * and determines whether the vehicle is allowed to circulate based on the provided date and time.
+ * <p>
+ * The application uses a set of predefined rules for restriction evaluation and outputs
+ * a user-friendly message indicating the result.
+ * </p>
+ *
+ * Example usage:
+ * <pre>
+ *     java com.app.App
+ * </pre>
+ *
+ * @author Kelly Sangoluisa
+ */
 public class App {
 
     public static void main(String[] args) {
