@@ -12,9 +12,13 @@ public class LicensePlate {
         return fullPlate.matches("[A-Za-z]{3}-?\\d{3,4}");
     }
 
-    public int getLastDigit(String fullPlate) {
-        char lastDigiString = fullPlate.charAt(fullPlate.length() - 1);
-        int lastDigit = Character.getNumericValue(lastDigiString);
-        return lastDigit;
+    public int getLastDigit(String plate) {
+        String cleanPlate = plate.replace("-", "");
+        char lastChar = cleanPlate.charAt(cleanPlate.length() - 1);
+        if (Character.isDigit(lastChar)) {
+            return Character.getNumericValue(lastChar);
+        } else {
+            return -1;
+        }
     }
 }
