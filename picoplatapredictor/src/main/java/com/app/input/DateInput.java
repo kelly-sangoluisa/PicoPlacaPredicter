@@ -11,9 +11,9 @@ public class DateInput {
         this.rawDate = rawDate;
     }
     
-    public LocalDate parseDate(String rawDate) {
+    public LocalDate parseDate() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        return LocalDate.parse(rawDate, formatter);
+        return LocalDate.parse(this.rawDate, formatter);
     }
 
     public DayOfWeek getDayOfWeek(LocalDate date) {

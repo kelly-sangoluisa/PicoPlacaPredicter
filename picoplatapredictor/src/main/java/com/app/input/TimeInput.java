@@ -10,8 +10,8 @@ public class TimeInput {
         this.rawTime = rawTime;
     }
 
-    public LocalTime parseTime(String rawTime) {
+    public LocalTime parseTime() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
-        return LocalTime.parse(rawTime, formatter);
+        return LocalTime.parse(this.rawTime, formatter);
     }
 }
