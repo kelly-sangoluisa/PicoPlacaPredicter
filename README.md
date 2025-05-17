@@ -116,16 +116,17 @@ When you run the application, you will be prompted to enter:
 ### Example Usage
 
 ```
-Enter the date (dd-MM-yyyy): 12-06-2024
+Enter the date (dd-MM-yyyy): 17-05-2025
 Enter the time (HH:mm): 08:30
 Enter the license plate (e.g., ABC-1234): ABC-1234
-You are NOT allowed to drive because your license plate ends with 4 and today is Wednesday. Driving is restricted at 08:30 due to 'Pico y Placa' regulations.
+You are allowed to drive at this time.  
 ```
 
+
 ```
-Enter the date (dd-MM-yyyy): 15-06-2024
-Enter the time (HH:mm): 10:00
-Enter the license plate (e.g., ABC-1234): XYZ-5678
+Enter the date (dd-MM-yyyy): 19-05-2025
+Enter the time (HH:mm): 19:00
+Enter the license plate (e.g., ABC-1234): XYZ-1001
 You are allowed to drive at this time.
 ```
 
