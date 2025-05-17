@@ -32,12 +32,10 @@ public class Predictor {
     }
 
     public boolean predict(String rawDate, String rawTime, String fullPlate) {
-        date = new DateInput(rawDate);
-        setDate(date);
-        time = new TimeInput(rawTime);
-        setTime(time);
-        plate = new LicensePlate(fullPlate);
-        setPlate(plate);
+        setDate(new DateInput(rawDate));
+        setTime(new TimeInput(rawTime));
+        setPlate(new LicensePlate(fullPlate));
+
         LocalDate parsedDate = date.parseDate(rawDate);
         LocalTime parsedTime = time.parseTime(rawTime);
         DayOfWeek dayOfTheWeek = parsedDate.getDayOfWeek();
