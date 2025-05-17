@@ -1,4 +1,4 @@
-package input;
+package com.app.input;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

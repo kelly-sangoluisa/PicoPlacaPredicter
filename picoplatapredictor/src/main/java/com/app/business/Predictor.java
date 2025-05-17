@@ -1,12 +1,13 @@
-package business;
+package com.app.business;
 
-import input.DateInput;
-import input.LicensePlate;
-import input.TimeInput;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
+
+import com.app.input.DateInput;
+import com.app.input.LicensePlate;
+import com.app.input.TimeInput;
 
 public class Predictor {
     private DateInput date;

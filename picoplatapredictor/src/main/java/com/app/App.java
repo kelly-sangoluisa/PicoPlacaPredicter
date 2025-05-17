@@ -1,6 +1,10 @@
-import business.*;
-import input.LicensePlate;
-import output.ResultFormatter;
+package com.app;
+import com.app.business.Predictor;
+import com.app.business.Rule;
+import com.app.business.RuleSet;
+import com.app.business.Schedule;
+import com.app.input.LicensePlate;
+import com.app.output.ResultFormatter;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;
@@ -14,25 +18,26 @@ public class App {
         RuleSet ruleSet = setupDefaultRules();
         Predictor predictor = new Predictor(ruleSet);
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese la fecha en el formato dd-MM-yyyy: ");
-        String rawDate = scanner.nextLine();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Ingrese la fecha en el formato dd-MM-yyyy: ");
+            String rawDate = scanner.nextLine();
 
-        System.out.print("Ingrese la hora en el formato (HH:mm): ");
-        String rawTime = scanner.nextLine();
+            System.out.print("Ingrese la hora en el formato (HH:mm): ");
+            String rawTime = scanner.nextLine();
 
-        System.out.print("Ingrese la placa del vehículo (ej: ABC-1234): ");
-        String fullPlate = scanner.nextLine();
+            System.out.print("Ingrese la placa del vehículo (ej: ABC-1234): ");
+            String fullPlate = scanner.nextLine();
 
-        LicensePlate plate = new LicensePlate(fullPlate);
-        if (!plate.validatePlate()) {
-            System.out.println("Formato de placa inválido. Debe ser 3 letras y 3 o 4 dígitos.");
-            return;
+            LicensePlate plate = new LicensePlate(fullPlate);
+            if (!plate.validatePlate()) {
+                System.out.println("Formato de placa inválido. Debe ser 3 letras y 3 o 4 dígitos.");
+                return;
+            }
+
+            boolean result = predictor.predict(rawDate, rawTime, fullPlate);
+            String message = ResultFormatter.formatResult(result);
+            System.out.println(message);
         }
-
-        boolean result = predictor.predict(rawDate, rawTime, fullPlate);
-        String message = ResultFormatter.formatResult(result);
-        System.out.println(message);
     }
 
     

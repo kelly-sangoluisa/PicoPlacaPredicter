@@ -1,4 +1,4 @@
-package input;
+package com.app.input;
 
 public class LicensePlate {
     private String fullPlate;

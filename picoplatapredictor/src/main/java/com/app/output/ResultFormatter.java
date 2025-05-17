@@ -1,4 +1,4 @@
-package output;
+package com.app.output;
 
 public class ResultFormatter {
     
